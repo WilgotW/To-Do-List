@@ -14,5 +14,13 @@ body{
     display: grid;
     justify-content: center;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 0fr);
+    grid-template-columns: repeat(5, 0fr);    
 }
+
+.task{
+    word-break:break-all;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
