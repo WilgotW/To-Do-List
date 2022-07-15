@@ -6,7 +6,6 @@ const colorOptions = [
     "#c98686", //pink
     "#f2b880", //peach
     "#fff4ec", //white
-    "#dfb89c" //beige
 ];
 
 const addBtn = document.getElementById("addButton");
@@ -16,18 +15,25 @@ let taskInput;
 let taskText;
 
 addBtn.addEventListener('click', function addClicked(event){
+    
     tasks.push(document.createElement('div'));
 
     taskInput = document.getElementById("taskInput");
 
     tasks[taskIndex].textContent = taskInput.value;
-    tasks[taskIndex].style.backgroundColor = 'salmon';
+    let color = colorOptions[generateColor()];
+    tasks[taskIndex].style.backgroundColor = color;
+
     tasks[taskIndex].style.width = '150px';
     tasks[taskIndex].style.height = '150px';
 
     taskBlock.appendChild(tasks[taskIndex]);
     taskIndex++;
 });
+
+function generateColor(){
+    return Math.floor(Math.random() * (3 - 0 + 1) + 0);
+}
 
 
 

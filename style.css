@@ -1,3 +1,7 @@
+body{
+    background: #dfb89c;
+}
+
 .center{
     width: 100%;
     display: flex;
