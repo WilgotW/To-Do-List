@@ -1,7 +1,9 @@
 body{
     background: #dfb89c;
 }
-
+h1{
+    font-family: 'Roboto', sans-serif;
+}
 .center{
     width: 100%;
     display: flex;
@@ -19,10 +21,18 @@ body{
 }
 
 .task{
+    font-family: 'Roboto', sans-serif;
     border: 2px solid black;
     word-break:break-all;
     width: 150px;
     height: 150px;
+    resize: none;
+}
+
+#taskInput{
     overflow: hidden;
+    resize: none;
+    width: 150px;
+    height: 150px;
 }
 

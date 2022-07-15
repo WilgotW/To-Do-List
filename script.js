@@ -11,12 +11,13 @@ let colorIndex = 0;
 
 const addBtn = document.getElementById("addButton");
 const taskBlock = document.getElementById("taskBlock");
+const removeBtn = document.getElementById("removeButton");
 
 let taskInput;
 let taskText;
 
 addBtn.addEventListener('click', function addClicked(event){
-    tasks.push(document.createElement('div'));
+    tasks.push(document.createElement('textarea'));
     taskInput = document.getElementById("taskInput");
 
     tasks[taskIndex].textContent = taskInput.value;
@@ -34,9 +35,12 @@ addBtn.addEventListener('click', function addClicked(event){
     taskIndex++;
 });
 
-// function generateColor(){
-//     return Math.floor(Math.random() * (3 - 0 + 1) + 0);
-// }
+removeBtn.addEventListener('click', function removeClicked(event){
+    if(taskIndex > 0){
+        taskBlock.removeChild(tasks[taskIndex-1]);
+        taskIndex--;
+    }
+});
 
 
 
